@@ -1,0 +1,144 @@
+main {
+  min-height: 80vh;
+}
+.main-header{
+  background-color: #131921;
+}
+.logo-img{
+  width: 118px;
+margin-top: 15px;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+.sel-address{
+  color: white;
+  font-family: sans-serif;
+  font-weight: 800;
+  margin-top: -4px;
+}
+.search-btn{
+  background: #FEBD69;
+  border: 2px solid #FEBD69;
+  color: black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 8.6px 10px;
+}
+
+.btn-outline-success:hover {
+  color:black!important;
+  background-color: #F3A847!important;
+  border-color: #F3A847!important;
+}
+#basic-navbar-nav a{
+  color: white;
+  text-decoration: none;
+}
+.btn-primary{
+  background: #f4d078;
+  color:black;
+  background: -webkit-linear-gradient(top,#f7dfa5,#f0c14b);
+  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+  padding: 6px;
+font-size: 14px;
+border-radius: 3px;
+border-color: #ADB1B8 #A2A6AC #8D9096;
+border-style: solid;
+border-width: 1px;
+  text-transform:initial;
+}
+.btn-primary:hover {
+  background: #f4d078;
+  color:black;
+background: -webkit-linear-gradient(top,#f7dfa5,#f0c14b);
+background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+}
+#adminmenu{
+  padding-right: 0px;
+}
+#basic-navbar-nav  li{
+  list-style: none;
+  padding:10px 10px;
+  text-transform:none;
+  font-size: 13px;
+}
+.navbar{
+  background-color: #232F3E!important;
+  padding:7px 0px;
+}
+.ml-auto a{
+  margin-left: auto !important;
+  margin-top: 5px;
+  color: white;
+}
+.dropdown-menu a{
+  color:black;
+}
+.nav-item {
+  margin-right: 0px!important;
+}
+/* .btn-outline-success:focus, .btn-outline-success.focus {
+  box-shadow: none!important;
+} */
+.search-input{
+  width:88%!important;
+  background-color: white!important;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.btn-outline-success {
+  color:black;
+  border-color: #FEBD69;
+}
+.pin-img{
+  margin-top: 11px;
+  padding-left: 6px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
