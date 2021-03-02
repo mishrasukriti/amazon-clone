@@ -176,7 +176,7 @@ const ProductEditScreen = ({ match, history }) => {
                 </Form.Group>
 
                 <Form.Group controlId='category'>
-                  <Form.Label>Category</Form.Label>
+                  <Form.Label className="mr-4">Category</Form.Label>
                   <Form.Control
                     as='select'
                     value={category}
