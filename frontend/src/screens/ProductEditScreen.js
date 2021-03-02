@@ -57,7 +57,7 @@ const ProductEditScreen = ({ match, history }) => {
         setDescription(product.description)
       }
     }
-  }, [dispatch, history, productId, product, successUpdate])
+  }, [dispatch, history, productId, product, successUpdate, pageNumber])
 
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0]
@@ -98,11 +98,7 @@ const ProductEditScreen = ({ match, history }) => {
     )
   }
 
-  const handleCategoryChange = (e) => {
-    e.preventDefault();
-    setCategory(e.target.value);
-  }
-
+  
   return (
     <>
       <Link to='/admin/productlist' className='btn btn-light my-3'>
@@ -176,7 +172,7 @@ const ProductEditScreen = ({ match, history }) => {
                 </Form.Group>
 
                 <Form.Group controlId='category'>
-                  <Form.Label className="mr-4">Category</Form.Label>
+                  <Form.Label >Category</Form.Label>
                   <Form.Control
                     as='select'
                     value={category}
@@ -186,17 +182,7 @@ const ProductEditScreen = ({ match, history }) => {
                       categories && categories.map(category => <option value={category.name}> {category.name} </option>)
                     }
                   </Form.Control>
-                  {/* <select  onChange={(e) => setCategory(e.target.value)}>
-                {
-                  categories && categories.map(category => <option value={category.name}> {category.name} </option>)
-                }
-              </select> */}
-                  {/* <Form.Control
-                type='text'
-                placeholder='Enter category'
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              ></Form.Control> */}
+                  
                 </Form.Group>
 
                 <Form.Group controlId='description'>

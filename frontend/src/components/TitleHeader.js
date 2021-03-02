@@ -2,13 +2,13 @@ import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import logo from '../img/logo.png'
 import pin from '../img/pin.JPG'
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { Route } from 'react-router-dom'
 import SearchBox from './SearchBox'
 
 import { useDispatch, useSelector } from 'react-redux'
 import cartimg from '../img/cart.JPG'
-import CatSearch from './CatSearch'
+
 import { logout } from '../actions/userActions'
 
 
@@ -28,12 +28,12 @@ const TitleHeader = () => {
         <div className="row">
           <div style={{textAlign:"center"}} className="col-md-1 col-xs-3">
              <LinkContainer style={{display:"inline-block",textAlign:"center"}} to='/'>
-            <Navbar.Brand><img className="logo-img" src={logo} /></Navbar.Brand>
+            <Navbar.Brand><img className="logo-img" src={logo} alt="" /></Navbar.Brand>
           </LinkContainer>
           </div>
           <div style={{marginTop: "13px", marginLeft:"22px"}} className="col-md-3 d-none d-md-block">
               <div className="row">
-                  <div className="col-md-1"><img className="pin-img" src={pin} /></div>
+                  <div className="col-md-1"><img className="pin-img" src={pin} alt="" /></div>
                   <div className="col-md-10">
                       <div style={{color:"#ccc"}}>Hello</div>
                       <div className="sel-address" style={{color:"white"}}>Select your address</div>
@@ -93,7 +93,7 @@ const TitleHeader = () => {
               )}
                <LinkContainer style={{paddingBottom:"0px"}} to='/cart'>
                 <Nav.Link style={{paddingBottom:"0px"}}>
-                 <img style={{position: "relative", top: "-8px"}} src={cartimg} /> <label style={{marginTop: "21px"}} className="sel-address">Cart</label>
+                 <img style={{position: "relative", top: "-8px"}} src={cartimg} alt="" /> <label style={{marginTop: "21px"}} className="sel-address">Cart</label>
                 </Nav.Link>
               </LinkContainer>
             </Nav>

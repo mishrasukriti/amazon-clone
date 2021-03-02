@@ -31,7 +31,7 @@ const HomeScreen = ({ match }) => {
       console.log("no");
     }
     
-  }, [dispatch, keyword, pageNumber])
+  }, [dispatch, keyword, pageNumber, catkeyword])
 
   return (
     <>

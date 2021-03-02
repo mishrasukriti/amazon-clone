@@ -142,7 +142,7 @@ const ProductScreen = ({ history, match }) => {
                       type='button'
                       disabled={product.countInStock === 0}
                     >
-                      <img style={{float:"left"}} src={cart1} />Add To Cart
+                      <img style={{float:"left"}} src={cart1} alt="" />Add To Cart
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
