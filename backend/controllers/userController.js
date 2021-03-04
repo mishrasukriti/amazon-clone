@@ -28,7 +28,7 @@ const authUser = asyncHandler(async (req, res) => {
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body
+  const { name, address, email, password } = req.body
 
   const userExists = await User.findOne({ email })
 
@@ -39,6 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   const user = await User.create({
     name,
+    address,
     email,
     password,
   })
@@ -47,6 +48,7 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(201).json({
       _id: user._id,
       name: user.name,
+      address: user.address,
       email: user.email,
       isAdmin: user.isAdmin,
       token: generateToken(user._id),
@@ -67,6 +69,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
     res.json({
       _id: user._id,
       name: user.name,
+      address: user.address,
       email: user.email,
       isAdmin: user.isAdmin,
     })
@@ -84,6 +87,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 
   if (user) {
     user.name = req.body.name || user.name
+    user.address = req.body.address || user.address
     user.email = req.body.email || user.email
     if (req.body.password) {
       user.password = req.body.password
@@ -94,6 +98,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
+      address: updatedUser.address,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
       token: generateToken(updatedUser._id),
@@ -149,6 +154,7 @@ const updateUser = asyncHandler(async (req, res) => {
 
   if (user) {
     user.name = req.body.name || user.name
+    user.address = req.body.address || user.address
     user.email = req.body.email || user.email
     user.isAdmin = req.body.isAdmin
 
@@ -157,6 +163,7 @@ const updateUser = asyncHandler(async (req, res) => {
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
+      address: updatedUser.address,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
     })

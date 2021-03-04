@@ -12,6 +12,7 @@ const UserEditScreen = ({ match, history }) => {
   const userId = match.params.id
 
   const [name, setName] = useState('')
+  const [address, setAddress] = useState('')
   const [email, setEmail] = useState('')
   const [isAdmin, setIsAdmin] = useState(false)
 
@@ -71,6 +72,17 @@ const UserEditScreen = ({ match, history }) => {
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
+
+            <Form.Group controlId='address'>
+                  <Form.Label>Address</Form.Label>
+                  <Form.Control
+                    type='address'
+                    placeholder='Enter your address'
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                  ></Form.Control>
+                </Form.Group>
+
 
             <Form.Group controlId='email'>
               <Form.Label>Email Address</Form.Label>
