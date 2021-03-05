@@ -40,6 +40,7 @@ const ProfileScreen = ({ location, history }) => {
         dispatch(listMyOrders())
       } else {
         setName(user.name)
+        setAddress(user.address)
         setEmail(user.email)
       }
     }
@@ -50,7 +51,7 @@ const ProfileScreen = ({ location, history }) => {
     if (password !== confirmPassword) {
       setMessage('Passwords do not match')
     } else {
-      dispatch(updateUserProfile({ id: user._id, name, email, password }))
+      dispatch(updateUserProfile({ id: user._id, name, address, email, password }))
     }
   }
 
