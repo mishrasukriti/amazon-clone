@@ -15,3 +15,7 @@ jane@example.com (Customer)
 
 frank@gmail.com (Customer)
 123456
+
+
+For the payments through PayPal use your PayPal U.S. account
+
